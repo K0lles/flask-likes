@@ -14,9 +14,12 @@ def hello_world():
 def view_likes():
     try:
         names = request.args.get('names')  # getting entered names in url address
-        list_name = list(names.split(','))  # making from string list
+        list_name = list(names.split(','))  # converting from string to list
+        
+        # checking if the string is empty
         if list_name[0] == "":
             list_name = []
+            
         answer, error = processing_likes(list_name)
         if error:
             return "{ <br/>" \
