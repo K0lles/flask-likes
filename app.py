@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():  # put application's code here
+def hello_world():
     return 'Hello World! <br/>' \
            'send POST request like --> http://127.0.0.1:8000/likes?names=Андрей,Жанна,Коля'
 
